@@ -7,6 +7,9 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copier les fichiers Flutter Web dans Nginx
 COPY . /usr/share/nginx/html
 
+# Copier la config Nginx custom
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Exposer le port 80
 EXPOSE 80
 
